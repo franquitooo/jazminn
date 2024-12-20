@@ -1,0 +1,164 @@
+.mas-razones-body {
+    background-color: #fff5f5;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.mas-razones-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    z-index: 10;
+}
+
+.mas-razones-title {
+    color: #ff9a9e;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.razones-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.razon-item {
+    background-color: #fff5f5;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.razon-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.razon-item i {
+    font-size: 2em;
+    color: #ff9a9e;
+    margin-bottom: 10px;
+}
+
+.razon-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    color: #ff9a9e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #fad0c4;
+}
+
+.decoration {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.decoration-1 {
+    top: 10%;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    background-image: url('flower1.png');
+    animation: float 6s infinite ease-in-out;
+}
+
+.decoration-2 {
+    top: 60%;
+    right: 5%;
+    width: 80px;
+    height: 80px;
+    background-image: url('flower2.png');
+    animation: float 8s infinite ease-in-out reverse;
+}
+
+.decoration-3 {
+    bottom: 10%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background-image: url('flower3.png');
+    animation: float 7s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 20px;
+    color: #ff9a9e;
+    opacity: 0;
+    animation: float-up 4s ease-in infinite;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .mas-razones-container {
+        padding: 20px;
+    }
+    
+    .mas-razones-title {
+        font-size: 2em;
+    }
+
+    .razones-list {
+        grid-template-columns: 1fr;
+    }
+}
+

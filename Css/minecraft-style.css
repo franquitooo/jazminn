@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+    background: #8B8B8B;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.minecraft-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('minecraft-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.minecraft-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    position:relative;
+    z-index: 1;
+}
+
+.minecraft-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #000000;
+}
+
+.minecraft-header p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px #000000;
+}
+
+.minecraft-nav {
+    background: #545454;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background: #7DCE94;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background: #63A375;
+}
+
+.minecraft-gallery {
+    padding: 50px 20px;
+}
+
+.minecraft-gallery h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px #000000;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.gallery-item {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.minecraft-message {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.minecraft-message h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px #000000;
+}
+
+.message-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.3em;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.minecraft-footer {
+    text-align: center;
+    padding: 30px;
+    background: #545454;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%;
+    }
+}
